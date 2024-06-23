@@ -9,11 +9,32 @@ Installation guidelines for Multimodal Indoor Simulator (MINOS), it is designed 
 
 > ### Original Source:
 > MINOS-Simulator: https://minosworld.github.io/
+
 ## Installation Guidelines:
 This has been tested on Ubuntu 20.04 only. There are two ways to install and setup MINOS on your local device.
+1) Bash-script Installation.
+2) Manual Script-by-Script Installation.
 
-### Bash-script Installation:
-### Manual Script-by-Script Installation:
+### 1) Bash-script Installation:
+
+Go to this directory:
+```
+mkdir -p ~/dev && cd ~/dev
+```
+Download this script file: 
+```
+wget https://raw.githubusercontent.com/aliaxam153/MINOS-Simulator/main/install_minos.sh
+```
+Make the script executable:
+```
+chmod +x install_minos.sh
+```
+Run the script:
+```
+./install_minos.sh
+```
+
+### 2) Manual Script-by-Script Installation:
 ```
  sudo apt-get update && sudo apt-get upgrade
 ```
