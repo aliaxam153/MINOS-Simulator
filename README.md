@@ -15,7 +15,7 @@ This has been tested on Ubuntu 20.04 only. There are two ways to install and set
 1) Bash-script Installation.
 2) Manual Script-by-Script Installation.
 
-### 1) Bash-script Installation:
+## 1) Bash-script Installation:
 
 Go to this directory:
 ```
@@ -34,11 +34,11 @@ Run the script:
 ./install_minos.sh
 ```
 
-### 2) Manual Script-by-Script Installation:
+## 2) Manual Script-by-Script Installation:
 ```
  sudo apt-get update && sudo apt-get upgrade
 ```
-## Installation Python Version & Dependencies:
+### a) Installation Python Version & Dependencies:
 ```
 sudo apt install python3-pip
 sudo apt install python2.7-dev
@@ -67,7 +67,7 @@ chmod +x configure
 make
 sudo make install
 ````
-## Installation of minos:
+### b) Install MINOS:
 ```
 cd ~/dev/
 git clone --branch v0.7.x https://github.com/minosworld/minos.git
@@ -92,7 +92,7 @@ npm install node-gyp@3.8.0 bufferutil@4.0.1 utf-8-validate@5.0.2
 ```
 > Warning: Do not run the "npm audit fix" command, it will mess up the installed dependencies.
 
-## Install Python Requirements:
+### c) Install Dependencies:
 First, we will install socketIO-client-2
 ```
 cd ~/dev/minos/
@@ -118,10 +118,12 @@ cd ..
 sudo apt install libsdl2-dev
 pip3 install -e . -r requirements.txt
 ```
-## Download Matterport3D Dataset
+## Test the MINOS Simulator:
+### a) Download Matterport3D Dataset
 Request and download the [Matterport3D](https://niessner.github.io/Matterport/) datasets. Please indicate "use with MINOS simulator" in your request email. 
 To download the Matterport3D data, use the invocation as follow with the provided download script.
 ```
+cd ~
 download_mp.py --task_data minos -o .
 ```
 This will download a 5.1GB zip archive which expands to approximately 6.3GB.
@@ -129,9 +131,9 @@ This will download a 5.1GB zip archive which expands to approximately 6.3GB.
 After download, extract the mp3d_minos.zip file to $HOME/work/ directory.
 ```
 sudo apt install unzip
-unzip /PATH/to/mp3d_minos.zip -d $HOME/work/
+unzip ~/mp3d_minos.zip -d $HOME/work/
 ```
-### Test MINOS by running matterport3d dataset
+### b) Test MINOS with Matterport3D Dataset
 ```
 python3 -m minos.tools.pygame_client --dataset mp3d --scene_ids 17DRP5sb8fy --env_config pointgoal_mp3d_s
 ```
